@@ -25,7 +25,7 @@ function series(){
                     return(
                         <div className="box" key={datos.id}>
                               <figure className="box-img">
-                                 <img src={datos.backdrop_path} alt="Shazam" />
+                                 <img src={datos.backdrop_path} alt={datos.title} />
                               </figure>
                              <div className="box-texts">
                                  <h1>{datos.title}</h1>  
