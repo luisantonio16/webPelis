@@ -6,6 +6,7 @@ import Fecht from './fecht.js'
 
 function series(){
     const api = "https://api.themoviedb.org/3/trending/all/week?api_key=cdb5b34b6205cd62b1fb36acc98795e2";
+    const api_image ="https://image.tmdb.org/t/p/w500";
     const [datosApi, setdatos] = useState([])
 
     useEffect(()=>{
@@ -22,15 +23,18 @@ function series(){
            <article className="series-container">
             {
                 datosApi.map(datos=>{
+                    const {vote_average} = datos
                     return(
                         <div className="box" key={datos.id}>
                               <figure className="box-img">
-                                 <img src={datos.backdrop_path} alt={datos.title} />
+                                 <img src={api_image+datos.poster_path} alt={datos.title} />
                               </figure>
                              <div className="box-texts">
-                                 <h1>{datos.title}</h1>  
+                                 <h1>{datos.title}</h1> 
+                                 <p>Fecha de estreno:</p> 
+                                 <h2>{datos.release_date}</h2>  
                              </div>
-                             <div className="box-porcert">{datos.vote_average}</div>
+                             <div className="box-porcert">{Math.ceil(vote_average)+"/10"}</div>
                         </div>
                     );
                 })
