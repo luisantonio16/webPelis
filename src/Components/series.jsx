@@ -1,6 +1,4 @@
 import React, { useState,useEffect } from "react";
-import shazam from '../assets/shazam.jpeg'
-import superman from '../assets/superman1.jpg'
 import Fecht from './fecht.js'
 
 
