@@ -8,8 +8,6 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: rgba(0, 0, 0, 0.014);
-   
-
 }
 .container{
     width: 90%;
@@ -94,7 +92,6 @@ body{
 .series{
     margin-top: 50px;
     padding: 20px;
-
 }
 .series-tilte{
     font-size: 25px;
@@ -102,15 +99,11 @@ body{
     font-weight: 400;
 }
 .series-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    padding: 20px;
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     border: 2px solid red;
-    max-width: 1200px;
 
 }
 .box{
@@ -123,7 +116,7 @@ position: relative;
 }
 .box-img{
     width: 100%;
-    height: 350px;
+    height: 330px;
     object-fit: cover;
 }
 .box-img img{
@@ -156,15 +149,45 @@ position: relative;
     font-weight: 300;
 }
 .box-porcert{
-    width: 50px;
-    padding: 15px;
+    width: 40px;
+    padding: 12px;
     border-radius: 50%;
     background-color: #1557e7;
     color: #fff;
     position: absolute;
-    bottom: 28%;
+    bottom: 32%;
     left: 0;
     text-align: center;
-    font-size: 14px;
+    margin: auto;
+    font-size: 12px;
     
 }
+
+.box-porcert h4{
+font-size: 8px;
+}
+/*Slider*/
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
