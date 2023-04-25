@@ -1,11 +1,12 @@
 import React, { useState,useEffect,useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper";
-
-
 import "swiper/css";
-import "swiper/css/free-mode";
+import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+
+
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper";
 
 import '../Css/styles.css'
 
@@ -28,14 +29,20 @@ function series(){
             <h2 className="series-tilte">Lo mas popular</h2>
            <article className="series-container">
                  <Swiper
-                     slidesPerView={3}
-                     spaceBetween={30}
-                     freeMode={true}
-                     pagination={{
-                         clickable: true,
-                         }}
-                     modules={[FreeMode, Pagination]}
-                     className="mySwiper">
+                   effect={"coverflow"}
+                   grabCursor={true}
+                   centeredSlides={true}
+                   slidesPerView={"auto"}
+                   coverflowEffect={{
+                     rotate: 50,
+                     stretch: 0,
+                     depth: 100,
+                     modifier: 1,
+                     slideShadows: false,
+                   }}
+                   pagination={true}
+                   modules={[EffectCoverflow, Pagination]}
+                   className="mySwiper">
                         {
                             datosApi.map(datos=>{
                                 const {vote_average} = datos
@@ -50,7 +57,7 @@ function series(){
                                                   <p>Fecha de estreno:</p> 
                                                   <h2>{datos.release_date}</h2>  
                                             </div>
-                                            <div className="box-porcert">{Math.ceil(vote_average)+"/10"} </div>
+                                            {/* <div className="box-porcert">{Math.ceil(vote_average)+"/10"} </div> */}
                                        </div>
                                     </SwiperSlide>
                                 );                              
