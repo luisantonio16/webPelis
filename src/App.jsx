@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import Header from './Components/header.jsx'
-import Series from './Components/series.jsx'
+import Routers from './Routers/routerPrincipal'
 
 
 function App() {
   return (
     <div className="App">
-       <Header/>
-       <Series/>
+       <Routers/>
     </div>
   )
 }

@@ -14,8 +14,8 @@ import '../Css/styles.css'
 
 // import required modules
 
-function series(){
-    const api = "https://api.themoviedb.org/3/trending/tv/week?api_key=cdb5b34b6205cd62b1fb36acc98795e2";
+function Avances(){
+    const api = "https://api.themoviedb.org/3/movie/upcoming?api_key=cdb5b34b6205cd62b1fb36acc98795e2&language=en-US&page=2";
     const api_image ="https://image.tmdb.org/t/p/w500";
     const [datosApi, setdatos] = useState([])
 
@@ -27,7 +27,7 @@ function series(){
 
     return(
         <section className="series">
-            <h2 className="series-tilte">Series</h2>
+            <h2 className="series-tilte">Proximamente</h2>
            <article className="series-container">
                  <Swiper
                     slidesPerView={4}
@@ -64,5 +64,5 @@ function series(){
     );
 }
 
-export default series;
+export default Avances;
 

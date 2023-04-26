@@ -1,4 +1,3 @@
-
 import React, { useState,useEffect,useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -14,8 +13,8 @@ import '../Css/styles.css'
 
 // import required modules
 
-function series(){
-    const api = "https://api.themoviedb.org/3/trending/tv/week?api_key=cdb5b34b6205cd62b1fb36acc98795e2";
+function peliculas(){
+    const api = "https://api.themoviedb.org/3/trending/movie/week?api_key=cdb5b34b6205cd62b1fb36acc98795e2";
     const api_image ="https://image.tmdb.org/t/p/w500";
     const [datosApi, setdatos] = useState([])
 
@@ -27,7 +26,7 @@ function series(){
 
     return(
         <section className="series">
-            <h2 className="series-tilte">Series</h2>
+            <h2 className="series-tilte">Peliculas</h2>
            <article className="series-container">
                  <Swiper
                     slidesPerView={4}
@@ -64,5 +63,5 @@ function series(){
     );
 }
 
-export default series;
+export default peliculas;
 
