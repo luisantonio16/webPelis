@@ -99,8 +99,9 @@ body{
     margin:20px;
     color: #1557e7;
      border: none;
-     font-size: 20px;
+     font-size: 18px;
      cursor: pointer;
+     text-decoration: none;
 
 }
 
@@ -183,19 +184,30 @@ font-size: 8px;
 /*Slider*/
 
 
+
 .swiper {
     width: 100%;
-    height: 500px;
-}
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   
-.swiper-slide {
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 430px;
+    margin: auto;
+  }
+  
+
   
 .peliculas{
    margin-top: 250px ;
+}
+
+.active{
+    color: #04163d;
+    font-size: 20px;
+    text-decoration: none;
+
 }

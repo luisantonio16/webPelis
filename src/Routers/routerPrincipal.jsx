@@ -14,10 +14,10 @@ function routerPrincipal(){
            <Menu/>
             <section>
                    <Routes>
-                       <Route path="/" element={<Peliculas/>}/>
-                       <Route path="/Peliculas" element={<Peliculas/>}/>
-                       <Route path="/Series" element={<Series/>}/>
-                       <Route path="/Proximamente" element={<Avances/>}/>
+                       <Route path="/" element={<Peliculas />}/>
+                       <Route path="/Peliculas" element={<Peliculas />}/>
+                       <Route path="/Series" element={<Series />}/>
+                       <Route path="/Proximamente" element={<Avances />}/>
                     </Routes>  
             </section>
                 

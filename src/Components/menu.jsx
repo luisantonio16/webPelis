@@ -5,9 +5,10 @@ function Menu(){
     return(
         <div className="nav-menu">
              <nav className="nav">
-                 <NavLink to="/Peliculas"  className="nav-items">Peliculas</NavLink>
-                 <NavLink to="/Series" className="nav-items">Series</NavLink>
-                 <NavLink to="/Proximamente" className="nav-items">Proximamente</NavLink>
+                 <NavLink to="/Peliculas"  className={({isActive})=> isActive ? 'active': 'nav-items'}
+                 >Peliculas</NavLink>
+                 <NavLink to="/Series" className={({isActive})=> isActive ? 'active': 'nav-items'}>Series</NavLink>
+                 <NavLink to="/Proximamente"className={({isActive})=> isActive ? 'active': 'nav-items'}>Proximamente</NavLink>
              </nav>
              <form className="form">
                   <input type="text" placeholder="Accion, Aventure, Ficcion, anime..."/>

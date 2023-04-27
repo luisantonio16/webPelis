@@ -1,12 +1,13 @@
 import React, { useState,useEffect,useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/free-mode";
+import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 
+
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { EffectCoverflow, Pagination } from "swiper";
 
 import '../Css/styles.css'
 
@@ -29,14 +30,20 @@ function peliculas(){
             <h2 className="series-tilte">Peliculas</h2>
            <article className="series-container">
                  <Swiper
-                    slidesPerView={4}
-                    spaceBetween={10}
-                    freeMode={true}
-                    pagination={{
-                      clickable: true,
-                    }}
-                    modules={[FreeMode, Pagination]}
-                    className="mySwiper">
+                      effect={"coverflow"}
+                      grabCursor={true}
+                      centeredSlides={true}
+                      slidesPerView={"auto"}
+                      coverflowEffect={{
+                        rotate: 75,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: false,
+                      }}
+                      pagination={true}
+                      modules={[EffectCoverflow, Pagination]}
+                      className="mySwiper">
                         {
                             datosApi.map(datos=>{
                                 const {vote_average} = datos

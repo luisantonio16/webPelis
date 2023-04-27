@@ -2,12 +2,13 @@
 import React, { useState,useEffect,useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/free-mode";
+import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 
+
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { EffectCoverflow, Pagination } from "swiper";
 
 import '../Css/styles.css'
 
@@ -30,13 +31,19 @@ function series(){
             <h2 className="series-tilte">Series</h2>
            <article className="series-container">
                  <Swiper
-                    slidesPerView={4}
-                    spaceBetween={10}
-                    freeMode={true}
-                    pagination={{
-                      clickable: true,
+                    effect={"coverflow"}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={"auto"}
+                    coverflowEffect={{
+                      rotate: 50,
+                      stretch: 0,
+                      depth: 100,
+                      modifier: 1,
+                      slideShadows: false,
                     }}
-                    modules={[FreeMode, Pagination]}
+                    pagination={true}
+                    modules={[EffectCoverflow, Pagination]}
                     className="mySwiper">
                         {
                             datosApi.map(datos=>{
@@ -48,9 +55,7 @@ function series(){
                                                  <img src={api_image+datos.poster_path} alt={datos.title} />
                                              </figure>
                                              <div className="box-texts">
-                                                  <h1>{datos.title}</h1> 
-                                                  <p>Fecha de estreno:</p> 
-                                                  <h2>{datos.release_date}</h2>  
+                                                  <h1>{datos.name}</h1>  
                                             </div>
                                             {/* <div className="box-porcert">{Math.ceil(vote_average)+"/10"} </div> */}
                                        </div>
