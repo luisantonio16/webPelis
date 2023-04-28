@@ -7,7 +7,14 @@ function Menu(){
     const mandarUrl =e=>{
         e.preventDefault();
         let key = e.target.txtNombre.value;
-        navegar(`/Find/${key}`)
+
+        if(key.lenght <=0 ){
+            navegar("/Peliculas")
+
+        }else{
+            navegar(`/Find/${key}`)
+        }
+      
 
     }
 
