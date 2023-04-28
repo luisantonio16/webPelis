@@ -1,7 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Menu(){
+    const navegar = useNavigate();
+
+    const mandarUrl =e=>{
+        e.preventDefault();
+        let key = e.target.txtNombre.value;
+        navegar(`/Find/${key}`)
+
+    }
+
     return(
         <div className="nav-menu">
              <nav className="nav">
@@ -10,9 +19,9 @@ function Menu(){
                  <NavLink to="/Series" className={({isActive})=> isActive ? 'active': 'nav-items'}>Series</NavLink>
                  <NavLink to="/Proximamente"className={({isActive})=> isActive ? 'active': 'nav-items'}>Proximamente</NavLink>
              </nav>
-             <form className="form">
-                  <input type="text" placeholder="Accion, Aventure, Ficcion, anime..."/>
-                  <button>Search</button>
+             <form className="form" onSubmit={mandarUrl} >
+                  <input name="txtNombre" type="text" placeholder="Accion, Aventure, Ficcion, anime..."/>
+                 <button>Buscar</button>
              </form>
        </div>   
     );
