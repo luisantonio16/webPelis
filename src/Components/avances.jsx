@@ -49,8 +49,8 @@ function Avances(){
                             datosApi.map(datos=>{
                                 const {vote_average} = datos
                                 return(
-                                    <SwiperSlide>
-                                        <div className="box" key={datos.id}>
+                                    <SwiperSlide key={datos.id}>
+                                        <div className="box" >
                                              <figure className="box-img">
                                                  <img src={api_image+datos.poster_path} alt={datos.title} />
                                              </figure>

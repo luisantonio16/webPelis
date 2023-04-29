@@ -11,21 +11,27 @@ import '../Css/styles.css'
 
 function routerPrincipal(){
     return(
-        <BrowserRouter>
-           <Header/>
-           <Menu/>
-            <section>
-                   <Routes>
-                       <Route path="/" element={<Peliculas />}/>
-                       <Route path="/Peliculas" element={<Peliculas />}/>
-                       <Route path="/Series" element={<Series />}/>
-                       <Route path="/Proximamente" element={<Avances />}/>
-                       <Route path="/Find/:key" element={<Find />}/>
-                       <Route path="*" element={<Error />}/>
-                    </Routes>  
-            </section>
-                
-        </BrowserRouter>
+       <div>
+      
+
+<BrowserRouter>
+<Header/>
+        <Menu/>
+          
+          <section>
+                 <Routes>
+                     <Route path="/" element={<Peliculas />}/>
+                     <Route path="/Peliculas" element={<Peliculas />}/>
+                     <Route path="/Series" element={<Series />}/>
+                     <Route path="/Proximamente" element={<Avances />}/>
+                     <Route path="/Find/:key" element={<Find />}/>
+                     <Route path="*" element={<Error />}/>
+                  </Routes>  
+          </section>
+              
+      </BrowserRouter>
+       </div>
+       
     );
 }
 

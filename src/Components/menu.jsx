@@ -8,7 +8,7 @@ function Menu(){
         e.preventDefault();
         let key = e.target.txtNombre.value;
 
-        if(key.lenght <=0 ){
+        if(key.length <=0 ){
             navegar("/Peliculas")
 
         }else{

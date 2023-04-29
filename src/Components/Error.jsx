@@ -1,11 +1,12 @@
 import React from 'react'
-
+import { NavLink, useNavigate } from "react-router-dom";
 function ErrorPage(){
     return(
         <section className='container'>
             <div className='pageError'>
-                <h1>Error 404 Page not found</h1>  
-                <Link to="/Peliculas">Volver al Inicio</Link>
+                <h1>Error 404 Page not found</h1> 
+                <NavLink to="/Peliculas" className="btns"
+                 >Volver a inicio</NavLink> 
             </div>
         </section>
 

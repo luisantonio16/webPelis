@@ -222,9 +222,20 @@ font-size: 8px;
     justify-content: center;
     align-items: center;
     margin:50px auto;
+    flex-direction: column;
 }
 .pageError h1{
     font-size: 30px;
     color: #04163d;
     font-weight: bold;
+}
+.pageError .btns{
+    text-decoration: none;
+    padding: 10px 15px;
+    width: 150px;
+    background-color: #020c22;
+    margin-top: 10px;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
 }
